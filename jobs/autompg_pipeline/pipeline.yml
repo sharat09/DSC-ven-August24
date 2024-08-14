@@ -33,7 +33,7 @@ jobs:
       train_data: ${{parent.jobs.prep_job.outputs.train_data}}
       test_data: ${{parent.jobs.prep_job.outputs.test_data}}
       learning_rate: 0.001
-      registered_model_name: "model_file_test_dev893"
+      registered_model_name: "auto_mpg_model"
     outputs:
       model: 
     code: src/train
