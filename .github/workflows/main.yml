@@ -19,10 +19,8 @@ jobs:
       uses: actions/checkout@v2
     - name: azure login
       uses: azure/login@v1
-      env:
-        CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
       with:
-        creds: ${{ env.CREDENTIALS }}
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: setup
       run: bash setup.sh
       continue-on-error: true
